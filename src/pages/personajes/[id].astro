@@ -1,0 +1,32 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { id: "dantes-co" },
+      props: { title: "Dantes 'co' Rourke" },
+    },
+    {
+        params: { id: "golem"},
+        props: { title: "Mara 'Golem' Vex"}
+    },
+    {
+        params:{ id: "victor"},
+        props: { title: "Victor 'Shade' Lervoss"}
+    },
+    {
+        params: { id:"void"},
+        props:{title:"Dra. Evelyn 'Void' Qesleer"}
+    }
+  ];
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={`${title} - Personaje`} description="Personaje de la historia">
+  <h1>{title}</h1>
+</Layout>
