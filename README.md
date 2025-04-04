@@ -1,3 +1,3 @@
 # HIPERSTICION
 
-[!Portada(/public/portada.webp)]
+![Portada](/public/portada.webp)
