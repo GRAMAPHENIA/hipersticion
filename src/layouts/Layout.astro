@@ -1,5 +1,11 @@
 ---
-const { title, description } = Astro.props;
+import { ClientRouter } from "astro:transitions";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -9,8 +15,12 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title ?? "Hipersticion"}</title>
-    <meta name="description" content={description ?? "Descripción por defecto"} />
+    <title>{title}</title>
+    <ClientRouter/>
+    <meta
+      name="description"
+      content="HIPERSTICIÓN es un thriller cyberpunk donde tus ideas reescriben la realidad. Lo que imaginás puede alterar el pasado, desbloquear futuros y destruirte en el proceso."
+    />
   </head>
   <body>
     <div>
@@ -27,7 +37,7 @@ const { title, description } = Astro.props;
   }
 
   body {
-    @apply grid place-content-center p-[5rem];
+    @apply grid place-content-center py-[4rem];
   }
 
   body > div {

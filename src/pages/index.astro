@@ -9,10 +9,10 @@ const characters = await getCollection("characters");
 characters[0].slug;
 ---
 
-<Layout title="Hipersticion" description="Welcome to my website!">
+<Layout title="Hipersticion">
   <main>
-    <h1 class="text-center text-7xl mb-24">
-      HIPERS <span class="block">TICION</span>
+    <h1 class="border-2 border-white/5  py-20 bg-[url('/portada.webp')] rounded-xl text-center text-7xl mb-24">
+      HIPERSTICION
     </h1>
   </main>
 
@@ -31,11 +31,12 @@ characters[0].slug;
                   class="relative group w-48 mr-5"
                 >
                   <img
+                    transition:name={`img-${slug}`}
                     src={`/${img}`}
                     alt={title}
                     class="hover:saturate-150 brightness-105 hover:blur-xs rounded-lg w-full h-auto transition-all duration-100 ease-in-out "
                   />
-                  <div class="absolute inset-0 bg-white/5 backdrop-blur-sm bg-opacity-50 opacity-0 group-hover:opacity-100 hover:border-4 border-emerald-400/5 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                  <div class="absolute inset-0 bg-white/5 backdrop-blur-sm bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                     <span class="text-white text-xs font-semibold">
                       Ver ficha técnica
                     </span>

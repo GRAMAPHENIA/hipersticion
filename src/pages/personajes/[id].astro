@@ -20,26 +20,34 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 // Obtener props del personaje actual con tipo explícito
 const { character } = Astro.props as { character: CharacterEntry };
-const data = character.data;
+const { data, slug } = character;
 const { title, img, description } = data;
 
 const { Content } = await render(character);
 ---
 
-<Layout title={`${title} - Personaje`} description="Personaje de la historia">
+<Layout title={`${title} - Personaje`}>
   <div class="flex flex-col md:flex-row gap-12">
     <aside class="flex flex-col items-center gap-4">
+      <a
+        href="/"
+        class="hover:underline underline-offset-2 decoration-amber-400 opacity-70 transition-opacity hover:duration-300 ease-in-out hover:opacity-100"
+      >
+      ← Volver a los personajes
+      </a>
       <img
+        transition:name={`img-${slug}`}
         class="rounded-xl w-96 h-auto"
-        height="300"
         src={`/${img}`}
         alt={title}
       />
     </aside>
 
-    <main class="max-w-3xl prose prose-invert">
-        <div class="text-4xl font-bold mb-4">{title}</div>
+    <main class="max-w-3xl">
+      <h1 class="text-4xl font-bold mb-4">{title}</h1>
+      <div class="prose prose-invert">
         <Content />
-      </main>
+      </div>
+    </main>
   </div>
 </Layout>
