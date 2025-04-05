@@ -6,17 +6,12 @@ age: 42
 description: "Un detective privado cibernético que acecha las sombras de Neon Haven en busca de justicia."
 ---
 
-# Detective Victor "Shade" Lervoss
-
-## Universo
-
-**Futuristar**
 
 ## Ocupación
 
 Detective privado cibernético
 
----
+
 
 ## Descripción
 
@@ -28,7 +23,6 @@ A pesar de su apariencia dura y su cinismo afilado como una navaja, **Shade aún
 
 > _"La verdad siempre encuentra la forma de salir a la luz. Pero en Neon Haven, la luz puede ser tan mortal como la oscuridad."_
 
----
 
 ## Habilidades Especiales
 
@@ -38,10 +32,8 @@ A pesar de su apariencia dura y su cinismo afilado como una navaja, **Shade aún
 - **Red de contactos en la sombra:** Información privilegiada gracias a ex-agentes, hackers y criminales reformados.
 - **Modo Fantasma:** Sus implantes pueden reducir su firma térmica y de sonido, permitiéndole desaparecer en la noche.
 
----
 
 ## Frase icónica
 
 > _"En esta ciudad, la verdad es como un cigarro encendido bajo la lluvia... fugaz, frágil y condenado a apagarse."_
 
----

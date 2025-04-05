@@ -1,8 +1,11 @@
+import typography from "@tailwindcss/typography";
+
+/** @type {import('tailwindcss').Config} */
 export default {
-    content: ["./src/**/*.{js,ts,jsx,tsx,astro}"], // Asegúrate de que los archivos Astro estén incluidos
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  };
+  content: ["./src/**/*.{astro,html,js,ts,jsx,tsx,md}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [typography],
+};
   

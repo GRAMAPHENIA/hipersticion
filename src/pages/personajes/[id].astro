@@ -1,32 +1,45 @@
 ---
 import type { GetStaticPaths } from "astro";
-import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
 
-export async function getStaticPaths() {
-  return [
-    {
-      params: { id: "dantes-co" },
-      props: { title: "Dantes 'co' Rourke" },
-    },
-    {
-        params: { id: "golem"},
-        props: { title: "Mara 'Golem' Vex"}
-    },
-    {
-        params:{ id: "victor"},
-        props: { title: "Victor 'Shade' Lervoss"}
-    },
-    {
-        params: { id:"void"},
-        props:{title:"Dra. Evelyn 'Void' Qesleer"}
-    }
-  ];
-}
+// Tipo para el contenido de la colección "characters"
+type CharacterEntry = CollectionEntry<"characters">;
 
-const { title } = Astro.props;
+// Generar rutas estáticas para cada personaje
+export const getStaticPaths: GetStaticPaths = async () => {
+  const characters = await getCollection("characters");
+
+  return characters.map((character) => ({
+    params: { id: character.slug },
+    props: { character },
+  }));
+};
+
+// Obtener props del personaje actual con tipo explícito
+const { character } = Astro.props as { character: CharacterEntry };
+const data = character.data;
+const { title, img, description } = data;
+
+const { Content } = await render(character);
 ---
 
 <Layout title={`${title} - Personaje`} description="Personaje de la historia">
-  <h1>{title}</h1>
+  <div class="flex flex-col md:flex-row gap-12">
+    <aside class="flex flex-col items-center gap-4">
+      <img
+        class="rounded-xl w-96 h-auto"
+        height="300"
+        src={`/${img}`}
+        alt={title}
+      />
+    </aside>
+
+    <main class="max-w-3xl prose prose-invert">
+        <div class="text-4xl font-bold mb-4">{title}</div>
+        <Content />
+      </main>
+  </div>
 </Layout>

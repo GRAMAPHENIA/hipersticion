@@ -8,15 +8,10 @@ description: "Una hacker y mercenaria digital capaz de desmantelar sistemas de s
 
 # Mara "Golem" Vex
 
-## Universo
-
-**Futuristar**
-
 ## Ocupación
 
 Hacker de alto nivel, experta en infiltración digital y sabotaje corporativo.
 
----
 
 ## Descripción
 
@@ -26,9 +21,8 @@ Sombra entre sombras, **Golem** es más mito que realidad. Se dice que su presen
 
 Aunque su actitud sarcástica y distante la hace difícil de tratar, **Ghost tiene un código**:  
 
-> _"No robo por dinero. Robo por justicia. Aunque a veces la justicia pague bien."_
+> _"No robo por dinero. Aunque a veces la injusticia pague bien."_
 
----
 
 ## Habilidades Especiales
 
@@ -38,10 +32,8 @@ Aunque su actitud sarcástica y distante la hace difícil de tratar, **Ghost tie
 - **Drones Sombra:** Un pequeño enjambre de drones espías controlados por su mente.
 - **Ghost Protocol:** Puede borrar su rastro digital y asumir nuevas identidades al instante.
 
----
 
 ## Frase icónica
 
 > _"Si crees que tenes privacidad, es porque aún no me has conocido."_
 
----
